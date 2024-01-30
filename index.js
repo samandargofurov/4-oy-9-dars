@@ -25,38 +25,55 @@
 
 // 1. Sonlardan tashkil topgan massivdan eng kichik elementni topuvchi funksiya yozing (sort)
 
-// let arr = [5, 14, 3, 1, 9, 18, 27, 16, 25, 24, 33, 22, 11];
+let massive = [3, 1, -4, 2, 5, -10, 11, 6, 9];
 
-// let min = arr.sort(function (a, b) {
-//     return a - b
-// });
+function findMin(arr) {
+    if (arr.length === 0) {
+        return "bu joy bo'sh";
+    }
+    arr.sort(function(a, b){
+        return a - b
+    });
+    return arr[0];
+}
 
-// console.log(min);
+let res = findMin(massive);
+console.log(res);
 
-// 2. Sonlardan tashkil topgan massiv elementlari orasidan toq indeksdagilarining yigindisini topuvchi funksiya yozing
+// 2. Sonlardan tashkil topgan massiv elementlari orasidan toq indeksdagilarining yigindisini topuvchi funksiya yozing  \/\/
 
 // let massiv = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
+// function toqIndexsi(arg) {
+//     let sum = 0;
+//     for (let i = 1; i < arg.length; i++) {
+//         if (i % 2 == 1) {
+//             sum += arg[i];
+//         }
+//     }
+//     return sum
+// }
+
+// console.log(toqIndexsi(massiv));
+
 // 3. Sonlardan tashkil topgan massiv elementlari orasidan tublarini topuvchi funksiya yozing
 
-let massiv = [2, 4, 3, 6, 5, 7, 9, 11, 10];
 
-function tubSonlar(arg){
-    let counter = 0;
-
-    for (let i = 1; i < arg; i++) {
-        if (i % 2 == 1){
-            counter++
-        }
-    }
-
-    if (counter == 2) {
-        counter++
-    }
-
-    return counter
-}
-
-console.log(tubSonlar(massiv));
 
 // 4. Sonlardan tashkil topgan massiv elementlari orasidan 3 ga karralilarining sonini topuvchi funksiya yozing
+
+// let massiv = [5, 14, 3, 1, 9, 18, 27, 16, 25, 24, 33, 22, 11];
+
+// function toqIndexsi(arg) {
+//     let counter = 0;
+//     let sum = 0;
+//     for (let i = 1; i <= arg.length; i++) {
+//         if (i % 3 == 0) {
+//             sum += i
+//             counter++
+//         }
+//     }
+//     return counter
+// }
+
+// console.log(toqIndexsi(massiv));
